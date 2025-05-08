@@ -77,23 +77,23 @@ const BookingDetail: React.FC<BookingDetailProps> = ({
           {/* Contact & Booking Details */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+              <h3 className="text-sm font-medium text-jasglynn-gray uppercase tracking-wide">
                 Contact Info
               </h3>
               <div className="bg-gray-50 rounded-lg p-4 border">
-                <p className="text-base font-semibold text-gray-800">
+                <p className="text-base font-semibold text-jasglynn-gray">
                   {booking.name}
                 </p>
-                <p className="text-sm text-gray-600">{booking.email}</p>
-                <p className="text-sm text-gray-600">{booking.phone}</p>
+                <p className="text-sm text-jasglynn-gray">{booking.email}</p>
+                <p className="text-sm text-jasglynn-gray">{booking.phone}</p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+              <h3 className="text-sm font-medium text-jasglynn-gray uppercase tracking-wide">
                 {type === "event" ? "Event Info" : "Session Info"}
               </h3>
-              <div className="bg-gray-50 rounded-lg p-4 border space-y-1 text-sm text-gray-700">
+              <div className="bg-gray-50 rounded-lg p-4 border space-y-1 text-sm text-jasglynn-gray">
                 {type === "event" && isEventBooking(booking) ? (
                   <>
                     <p>
@@ -142,10 +142,10 @@ const BookingDetail: React.FC<BookingDetailProps> = ({
             isEventBooking(booking) &&
             booking.event_description && (
               <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">
+                <h3 className="text-sm font-medium text-jasglynn-gray uppercase tracking-wide mb-1">
                   Event Description
                 </h3>
-                <div className="bg-white rounded-md p-3 border text-sm text-gray-700">
+                <div className="bg-white rounded-md p-3 border text-sm text-jasglynn-gray">
                   {booking.event_description}
                 </div>
               </div>
@@ -153,17 +153,17 @@ const BookingDetail: React.FC<BookingDetailProps> = ({
 
           {booking.notes && (
             <div>
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">
+              <h3 className="text-sm font-medium text-jasglynn-gray uppercase tracking-wide mb-1">
                 Additional Notes
               </h3>
-              <div className="bg-white rounded-md p-3 border text-sm text-gray-700">
+              <div className="bg-white rounded-md p-3 border text-sm text-jasglynn-gray">
                 {booking.notes}
               </div>
             </div>
           )}
 
           {/* Footer Info */}
-          <div className="text-xs text-gray-400 border-t pt-3">
+          <div className="text-xs text-jasglynn-gray border-t pt-3">
             Booking Created: {new Date(booking.created_at).toLocaleString()}
           </div>
 

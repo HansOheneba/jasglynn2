@@ -46,6 +46,8 @@ const EventBookingForm: React.FC = () => {
     { value: "", label: "Select a venue" },
     { value: "Diplomatic Hall", label: "Diplomatic Hall" },
     { value: "Garden", label: "Garden" },
+    { value: "Grand Ballroom", label: "Grand Ballroom" },
+    { value: "Executive Suite", label: "Executive Suite" },
   ];
 
   const handleChange = (
@@ -156,7 +158,7 @@ const EventBookingForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto text-black">
+    <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
       {submitMessage.message && showAlert && (
         <div
           className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md transition-all duration-300 ease-in-out ${
@@ -168,8 +170,8 @@ const EventBookingForm: React.FC = () => {
           <div
             className={`flex items-center justify-between p-4 rounded-lg shadow-lg ${
               submitMessage.type === "success"
-                ? "bg-green-100 text-green-800 border border-green-300"
-                : "bg-red-100 text-red-800 border border-red-300"
+                ? "bg-jasglynn-lime/20 text-jasglynn-green border border-jasglynn-lime"
+                : "bg-jasglynn-coral/20 text-jasglynn-coral border border-jasglynn-coral"
             }`}
           >
             <div className="flex items-center">
@@ -177,7 +179,7 @@ const EventBookingForm: React.FC = () => {
             </div>
             <button
               type="button"
-              className="text-gray-500 hover:text-gray-800"
+              className="text-jasglynn-gray/70 hover:text-jasglynn-gray"
               onClick={() => setShowAlert(false)}
             >
               <svg
@@ -198,17 +200,29 @@ const EventBookingForm: React.FC = () => {
         </div>
       )}
 
-      <h2 className="text-3xl font-bold mb-6 text-gray-800">
-        Book Your Event Venue
-      </h2>
-      <p className="text-gray-600 mb-6">
-        Fill in your event details and we’ll get back to you.
-      </p>
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold mb-4 text-jasglynn-gray">
+          Book Your Event Venue
+        </h2>
+        <div className="w-20 h-1 bg-jasglynn-yellow mx-auto mb-4"></div>
+        <p className="text-gray-600">
+          Fill in your event details below and our team will help make your
+          event a success.
+        </p>
+      </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Contact Info */}
-        <div className="bg-gray-50 p-6 rounded-lg border">
-          <h3 className="text-lg font-semibold text-gray-700 mb-4">
+        <div className="bg-jasglynn-sky/10 p-6 rounded-lg border border-jasglynn-sky/30">
+          <h3 className="text-lg font-semibold text-jasglynn-gray mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 mr-2 text-jasglynn-green"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
             Contact Details
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -259,8 +273,20 @@ const EventBookingForm: React.FC = () => {
         </div>
 
         {/* Event Info */}
-        <div className="bg-gray-50 p-6 rounded-lg border">
-          <h3 className="text-lg font-semibold text-gray-700 mb-4">
+        <div className="bg-jasglynn-lime/10 p-6 rounded-lg border border-jasglynn-lime/30">
+          <h3 className="text-lg font-semibold text-jasglynn-gray mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 mr-2 text-jasglynn-green"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                clipRule="evenodd"
+              />
+            </svg>
             Event Details
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -343,7 +369,22 @@ const EventBookingForm: React.FC = () => {
         </div>
 
         {/* Description */}
-        <div className="bg-gray-50 p-6 rounded-lg border">
+        <div className="bg-jasglynn-yellow/5 p-6 rounded-lg border border-jasglynn-yellow/30">
+          <h3 className="text-lg font-semibold text-jasglynn-gray mb-4 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 mr-2 text-jasglynn-yellow"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clipRule="evenodd"
+              />
+            </svg>
+            Additional Information
+          </h3>
           <FormField
             id="event_description"
             label="Event Description"
@@ -354,7 +395,7 @@ const EventBookingForm: React.FC = () => {
               name="event_description"
               value={formData.event_description || ""}
               onChange={handleChange}
-              placeholder="Describe your event"
+              placeholder="Describe your event (type, theme, special requirements)"
               rows={3}
             />
           </FormField>
@@ -365,22 +406,55 @@ const EventBookingForm: React.FC = () => {
               name="notes"
               value={formData.notes || ""}
               onChange={handleChange}
-              placeholder="Any additional requirements or notes"
+              placeholder="Any additional requirements or notes for our team"
               rows={3}
             />
           </FormField>
         </div>
 
         {/* Submit */}
-        <div className="text-center">
+        <div className="text-center pt-4">
           <Button
             type="submit"
             variant="primary"
             disabled={isSubmitting}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-8 rounded-md shadow-md"
+            className="px-10 py-3 font-semibold rounded-md"
           >
-            {isSubmitting ? "Submitting..." : "Book Event Venue"}
+            {isSubmitting ? (
+              <span className="flex items-center justify-center">
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Processing...
+              </span>
+            ) : (
+              "Book Event Venue"
+            )}
           </Button>
+          <p className="mt-4 text-sm text-gray-500">
+            By submitting this form, you agree to our{" "}
+            <a href="#" className="text-jasglynn-green hover:underline">
+              terms and conditions
+            </a>
+            .
+          </p>
         </div>
       </form>
     </div>

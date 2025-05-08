@@ -2,7 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #3c3c3c;
+  --jasglynn-green: #1a6d57;
+  --jasglynn-yellow: #d9a741;
+  --jasglynn-lime: #b6d77e;
+  --jasglynn-coral: #f28f57;
+  --jasglynn-sky: #bfd7ea;
+  --jasglynn-gray: #3c3c3c;
 }
 
 @theme inline {
@@ -22,5 +28,36 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Button styling overrides */
+.bg-jasglynn-green {
+  background-color: var(--jasglynn-green);
+}
+
+.text-jasglynn-yellow {
+  color: var(--jasglynn-yellow);
+}
+
+/* Transitions */
+a,
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Admin dashboard improvements */
+.admin-dashboard .status-pending {
+  background-color: var(--jasglynn-yellow);
+  color: var(--jasglynn-gray);
+}
+
+.admin-dashboard .status-accepted {
+  background-color: var(--jasglynn-lime);
+  color: var(--jasglynn-gray);
+}
+
+.admin-dashboard .status-declined {
+  background-color: var(--jasglynn-coral);
+  color: var(--jasglynn-gray);
 }
