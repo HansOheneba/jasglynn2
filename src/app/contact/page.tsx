@@ -65,13 +65,13 @@ const ContactPage: React.FC = () => {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-jasglynn-gray mb-6">
+              <h2 className="text-3xl font-bold text-jasglynn-gray mb-6 text-gray-700">
                 Get in Touch
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                We&apos;d love to hear from you! Whether you have a question about
-                our venues, studios, or services, our team is ready to assist
-                you.
+                We&apos;d love to hear from you! Whether you have a question
+                about our venues, studios, or services, our team is ready to
+                assist you.
               </p>
 
               <div className="space-y-6">
@@ -101,7 +101,7 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-jasglynn-gray">
+                    <h3 className="text-lg font-medium text-[#1a6d57]">
                       Address
                     </h3>
                     <p className="mt-1 text-gray-600">
@@ -273,8 +273,8 @@ const ContactPage: React.FC = () => {
                     </svg>
                     <h4 className="text-xl font-medium mb-2">Thank You!</h4>
                     <p>
-                      Your message has been sent successfully. We&apos;ll get back to
-                      you shortly.
+                      Your message has been sent successfully. We&apos;ll get
+                      back to you shortly.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -394,9 +394,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-jasglynn-gray text-lg mb-2">
                   Map Placeholder
                 </p>
-                <p className="text-gray-600">
-                  Here you would integrate Google Maps or another map service
-                </p>
+                <p className="text-gray-600">Google Maps</p>
               </div>
             </div>
           </div>

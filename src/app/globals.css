@@ -3,12 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #3c3c3c;
-  --jasglynn-green: #1a6d57;
-  --jasglynn-yellow: #d9a741;
-  --jasglynn-lime: #b6d77e;
-  --jasglynn-coral: #f28f57;
-  --jasglynn-sky: #bfd7ea;
-  --jasglynn-gray: #3c3c3c;
 }
 
 @theme inline {
@@ -31,15 +25,6 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Button styling overrides */
-.bg-jasglynn-green {
-  background-color: var(--jasglynn-green);
-}
-
-.text-jasglynn-yellow {
-  color: var(--jasglynn-yellow);
-}
-
 /* Transitions */
 a,
 button {
@@ -48,16 +33,16 @@ button {
 
 /* Admin dashboard improvements */
 .admin-dashboard .status-pending {
-  background-color: var(--jasglynn-yellow);
-  color: var(--jasglynn-gray);
+  background-color: #D9A741;
+  color: #3C3C3C;
 }
 
 .admin-dashboard .status-accepted {
-  background-color: var(--jasglynn-lime);
-  color: var(--jasglynn-gray);
+  background-color: #B6D77E;
+  color: #3C3C3C;
 }
 
 .admin-dashboard .status-declined {
-  background-color: var(--jasglynn-coral);
-  color: var(--jasglynn-gray);
+  background-color: #F28F57;
+  color: #3C3C3C;
 }
